@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Государственный музей изобразительных искусств имени Пушкина</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="modal" class="modal hidden">
+        <button 
+            type="button" 
+            id="close-modal" 
+            class="close-modal"
+            aria-label="Закрыть модальное окно"  
+        ></button>
+        <form action="index.html">
+            <h2 class="modal-header">Вход</h2>
+            <div class="input-box">
+                <label for="input-login">Логин</label>
+                <input 
+                    class="modal-input" 
+                    id="input-login" 
+                    type="text"
+                    required>
+            </div>
+            <div class="input-box">
+                <label for="input-password">Пароль</label>
+                <input 
+                    class="modal-input" 
+                    id="input-password" 
+                    type="password"
+                    required>
+            </div>
+            <button id="login-btn" class="login-btn modal-btn" type="submit">Вход</button>
+        </form>
+    </div>
+    <div id="modal-overlay" class="modal-overlay hidden"></div>
+    <div class="container">
+        <header class="page-header">
+            <a href="index.html">
+                <img 
+                    src="img/Rectangle3.png" 
+                    alt="Государственный музей изобразительных искусств имени А.С.Пушкина"
+                    title="Логотип Пушкинского музея"
+                >
+            </a>
+            <a href="#main" class="skip-main">
+                Skip to main
+            </a>
+            <div class="search-panel">
+                <input 
+                    class="search-input input" 
+                    type="text" 
+                    aria-label="Это поиск по странице, но он не работает"
+                >
+                <button class="search-btn">
+                    <img src="img/Union.svg" alt="Поиск по странице">
+                </button>
+            </div>
+            <button 
+                id="open-modal" 
+                class="open-modal" 
+                aria-label="Форма входа в личный кабинет откроется в модальном окне"
+            >
+                <img src="img/user1.svg" alt="" title="Вход в личный кабинет">
+            </button>
+        </header>
+        <main id="main">
+
+            <nav class="menu">
+                <ul>
+                  <li><a href="#expositions">Выставки и события</a></li>
+                  <li><a href="#museum">Музей</a></li>
+                  <li><a href="#online">Онлайн-трансляции</a></li>
+                </ul>
+            </nav>
+
+            <section aria-labelledby="slider">
+                <h2 id="slider" class="slider visually-hidden">Афиша</h2>
+                <div class="slider-container" aria-labelledby="slider">
+                    <button 
+                        class="slider-btn btn-prev"
+                        id="prev"
+                        aria-label="Предыдущий слайд. Кнопка не работает"    
+                    >
+                        <img src="img/prev.svg" alt="">
+                    </button>
+                    <ul class="slides" aria-label="И вообще слайд только один">
+                        <li class="slide">
+                            <img src="img/durer.png" alt="" role="presentation">
+                            <div id="durer" class="visually-hidden" role="presentation">от Дюрера до Матисса</div>
+                            <a class="slide-link" aria-labelledby="buy-ticket durer" href="#">Билеты онлайн</a>
+                        </li>
+                    </ul>
+                    <button 
+                        class="slider-btn btn-next"
+                        id="next"
+                        aria-label="Следующий слайд. Кнопка не работает"       
+                    >
+                        <img src="img/next.svg" alt="">
+                    </button>
+                </div>
+            </section>
+
+            <section id="expositions" class="expositions">
+                <h2>
+                    Выставки и события
+                </h2>
+                <section>
+                    <div class="card"> 
+                        <img src="img/RectangleR.png" alt="" role="presentation">
+                        <h3 id="exp1">Святослав Рихтер в кругу друзей. Москва — Коктебель</h3>
+                        <h4>Выставка до 20 ноября</h4>
+                        <p>Текст о музее текст Текст о музее текст Текст о музее текст Текст о музее текст</p>
+                        <a href="#" aria-labelledby="buy-ticket exp1">Купить билет</a>
+                    </div>
+                    <div class="card">
+                        <img src="img/RectangleT.png" alt="" role="presentation">
+                        <h3 id="exp2">Тату</h3>
+                        <h4>Выставка до 27 сентября</h4>
+                        <p>Текст о музее текст Текст о музее текст Текст о музее текст Текст о музее текст</p>
+                        <a href="#" aria-labelledby="buy-ticket exp1">Купить билет</a>
+                    </div>
+                    <div class="card">
+                        <img src="img/Rectangle7.png" alt="" role="presentation">
+                        <h3 id="exp3">От Дюрера до Матисса. Избранные рисунки из собрания ГМИИ им. А.С. Пушкина</h3>
+                        <h4>Выставка до 1 ноября</h4>
+                        <p>Текст о музее текст Текст о музее текст Текст о музее текст Текст о музее текст</p>
+                        <a href="#" aria-labelledby="buy-ticket exp1">Купить билет</a>
+                    </div>
+                </section>
+            </section>
+            
+            <section aria-labelledby="museum">
+                <h2 id="museum">
+                    Музей
+                </h2>
+                <div class="museum-tabs visually-hidden hidden" role="tablist">
+                    <a
+                        id="mus-build"
+                        href="#mus-build-tab"
+                        class="museum-tab active"
+                        role="tab"
+                        aria-selected="true"
+                        aria-controls="mus-build-tab"
+                    >
+                        Здания
+                    </a>
+                    <a
+                        id="mus-hist"
+                        href="#mus-hist-tab"
+                        class="museum-tab"
+                        role="tab"
+                        aria-selected="false"
+                        aria-controls="mus-build-tab"
+                    >
+                        История
+                    </a>
+                </div>
+                <div
+                    class="mus-tabpanel active"
+                    id="mus-build-tab"
+                    role="tabpanel"
+                    aria-labelledby="mus-build"
+                >
+                    <ul class="mus-list">
+                        <li class="mus-list-item">
+                            <img src="img/rihter.png" alt="" role="presentation">
+                            <h3 id="rihter">МЕМОРИАЛЬНАЯ КВАРТИРА С.Т. РИХТЕРА</h3>
+                            <div>ул. Большая Бронная, 2/6, 16 этаж, кв. 58</div>
+                            <a href="#" aria-label="Подробнее о МЕМОРИАЛЬНОЙ КВАРТИРЕ С.Т. РИХТЕРА">Подробнее</a>
+                        </li>
+                        <li class="mus-list-item">
+                            <img src="img/museon.png" alt="" role="presentation">
+                            <h3 id="museon">ЦЭВ «МУСЕЙОН»</h3>
+                            <div>Колымажный пер., 6/2, 3 (вход с Малого Знаменского переулка)</div>
+                            <a href="#" aria-label="Подробнее о ЦЭВ «МУСЕЙОН»">Подробнее</a>
+                        </li>
+                        <li class="mus-list-item">
+                            <img src="img/lopuhin.png"  role="presentation" alt="">
+                            <h3 id="lopuhin">УСАДЬБА ЛОПУХИНЫХ</h3>
+                            <div>Малый Знаменский пер., 3/5с4</div>
+                            <a href="#" aria-label="Подробнее о УСАДЬБЕ ЛОПУХИНЫХ">Подробнее</a>
+                        </li>
+                        <li class="mus-list-item">
+                            <img src="img/training.png" role="presentation" alt="">
+                            <h3 id="training">УЧЕБНЫЙ МУЗЕЙ</h3>
+                            <div>ул. Чаянова, 15</div>
+                            <a href="#" aria-label="Подробнее о УЧЕБНОМ МУЗЕЕ">Подробнее</a>
+                        </li>
+                        <li class="mus-list-item">
+                            <img src="img/private.png" role="presentation" alt="">
+                            <h3 id="private">ОТДЕЛ ЛИЧНЫХ КОЛЛЕКЦИЙ</h3>
+                            <div>ул. Волхонка, 10</div>
+                            <a href="#" aria-label="Подробнее об ОТДЕЛЕ ЛИЧНЫХ КОЛЛЕКЦИЙ">Подробнее</a>
+                        </li>
+                        <li class="mus-list-item">
+                            <img src="img/gallery.png" role="presentation" alt="">
+                            <h3 id="gallary">ГАЛЕРЕЯ</h3>
+                            <div>ул. Волхонка, 14</div>
+                            <a href="#" aria-label="Подробнее о ГАЛЕРЕЕ">Подробнее</a>
+                        </li>
+                    </ul>
+                </div>
+                <div
+                    class="mus-tabpanel visually-hidden hidden"
+                    id="mus-hist-tab"
+                    role="tabpanel"
+                    aria-labelledby="mus-hist"
+                >
+                    <p>Государственный музей изобразительных искусств имени А.С. Пушкина – одно из крупнейших в России художественных собраний зарубежного искусства с древнейших времен до наших дней.</p>
+
+                    <p>В современной экспозиции представлены обширная учебная коллекция тонированных гипсовых слепков с произведений Античности, Средних веков и эпохи Возрождения, а также собрание подлинных произведений живописи, скульптуры, графики и декоративно-прикладного искусства.</p>
+
+                    <p>В залах первого этажа Главного здания представлены: произведения искусства Древнего Египта, Античности, собрание европейской живописи VIII–XVIII веков; два зала – Итальянский и Греческий дворики – занимают слепки. На втором этаже Главного здания в залах размещены слепки произведений искусства Древней Греции, Рима, Средних веков и Возрождения.</p>
+
+                    <p>В начале 2017 года музей определил новое направление своей деятельности – Пушкинский XXI, – ориентированное на современное российское и западное искусство во всех аспектах – выставочном, образовательном и исследовательском. Таким образом, ГМИИ им. А.С. Пушкина представляет собой открытую, интерактивную сцену, демонстрирующую развитие мировой культуры с древности до наших дней, живое, знакомое с детства пространство для получения знаний и общения.</p>
+                    <a href="#" aria-label="Подробнее об истории музея">Читать далее.</a>
+                </div>
+            </section>
+            
+            
+            <section id="online">
+                <h2>
+                    Онлайн-трансляции
+                </h2>
+                <div class="video-container">
+                    <iframe 
+                    width="560" 
+                    height="315" 
+                    src="https://www.youtube.com/embed/5qRR-5H1XgU" 
+                    title="YouTube video player" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen></iframe>
+                </div>
+            </section>
+            
+        </main>
+        <footer class="footer">
+        </footer>
+    </div>
+    
+    
+    <span id="buy-ticket" aria-hidden="true" class="visually-hidden">Купить билет</span>
+    <script>
+        const closeModal = () => {
+            document.getElementById("modal").classList.add("hidden")
+            document.getElementById("modal-overlay").classList.add("hidden")
+        }
+        const openModal = () => {
+            document.getElementById("modal").classList.remove("hidden")
+            document.getElementById("modal-overlay").classList.remove("hidden")
+            document.getElementById("close-modal").focus();
+        }
+        document.getElementById("close-modal").addEventListener('click', closeModal)
+        document.getElementById("open-modal").addEventListener('click', openModal)
+
+        const changeTab = () => {
+
+        }
+    </script>
+</body>
+</html>
